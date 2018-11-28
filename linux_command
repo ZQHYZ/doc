@@ -1,0 +1,3 @@
+crontab -e 编辑定时任务
+service crond restart 重启
+crontab -l 查看已配置
