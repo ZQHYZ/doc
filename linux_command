@@ -4,3 +4,6 @@ crontab -l 查看已配置
 
 useradd esuser 添加用户esuser
 chown -R esuser elasticsearch-6.5.1 给es及所有子设置用户为esuser
+
+:set ff 或 :set fileformat   在vi编辑模式下查看文件格式（在windows下编辑的脚本上传到linux执行报错  需要将dos改成unix）
+:set ff=unix 或 :set fileformat=unix  修改文件格式命令
