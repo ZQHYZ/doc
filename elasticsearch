@@ -31,3 +31,10 @@ ulimit -Su
 修改/etc/sysctl.conf文件，增加配置vm.max_map_count=262144
 sysctl -p
 https://www.cnblogs.com/zhi-leaf/p/8484337.html
+
+查看集群节点信息
+随意指定一台ip
+http://192.168.206.206:9200/_cat/nodes?v
+
+查看集群信息
+http://192.168.206.131:9200/_cat/health?v
