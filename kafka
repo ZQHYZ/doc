@@ -1,0 +1,15 @@
+启动kafka
+./kafka-server-start.sh ../config/server.properties
+
+创建topic
+./kafka-topics.sh --create --zookeeper 192.168.206.206:2181 --replication-factor 1 --partitions 1 --topic mytopic
+
+查看topic
+./kafka-topics.sh --list --zookeeper 192.168.206.206:2181
+
+查看topic详情
+./kafka-topics.sh --describe --zookeeper 192.168.206.206:2181
+
+删除topic
+./kafka-topics.sh --delete --zookeeper 192.168.206.206:2181 --topic mytopic
+
