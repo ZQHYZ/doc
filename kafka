@@ -1,3 +1,14 @@
+集群部署
+1.上传解压
+2.server.properties
+  1)broker.id
+  2)listeners
+  3)advertised.listeners
+  4)log.dirs
+  5)zookeeper.connect
+  
+启动kafka前需要先启动zookeeper  
+
 启动kafka
 ./kafka-server-start.sh ../config/server.properties
 
@@ -12,4 +23,13 @@
 
 删除topic
 ./kafka-topics.sh --delete --zookeeper 192.168.206.206:2181 --topic mytopic
+
+启动consumer
+./kafka-console-consumer.sh --bootstrap-server 192.168.206.206:9092 --topic mytopic --from-beginning
+
+启动producer
+./kafka-console-producer.sh --broker-list 192.168.206.206:9092 --topic mytopic
+
+
+
 
