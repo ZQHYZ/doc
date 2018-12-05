@@ -1,3 +1,9 @@
+kafka 连接原理
+首先连接 192.168.206.206:9092
+再连接返回的listeners
+最后继续连接advertised.listener
+
+
 集群部署
 1.上传解压
 2.server.properties
