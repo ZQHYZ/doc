@@ -7,3 +7,9 @@ chown -R esuser elasticsearch-6.5.1 给es及所有子设置用户为esuser
 
 :set ff 或 :set fileformat   在vi编辑模式下查看文件格式（在windows下编辑的脚本上传到linux执行报错  需要将dos改成unix）
 :set ff=unix 或 :set fileformat=unix  修改文件格式命令
+
+复制目录到指定机器，例：
+将1.1.1.1aa目录复制到本地root下
+scp -r root@1.1.1.1:/home/aa /root
+将本地aa目录复制到1.1.1.1bb目录下
+scp -r /root/aa root@1.1.1.1:/home/aa/bb
