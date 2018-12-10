@@ -1,4 +1,5 @@
 集群部署：
+安装jdk
 上传解压
 5.x开始版本不能用root用户启动
 useradd esuser
