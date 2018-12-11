@@ -1,0 +1,55 @@
+shell
+
+第一行   #!/bin/bash
+赋予执行权限    chmod +x filename
+#注释
+变量名=值
+取变量方式：$变量名   ${变量名}
+
+num=2
+echo "this is the ${num}nd"
+将打印this is the 2nd
+
+由 export 关键字处理过的
+变量叫做环境变量
+
+
+/dev/null 表示空设备文件
+0 表示stdin标准输入
+1 表示stdout标准输出
+2 表示stderr标准错误
+
+>代表覆盖
+>>代表追加
+echo"content" >> filename
+cat text1.txt >>text2.txt
+
+command > filename 
+command > filename 2>&1
+
+例：
+//test.sh
+#!/bin/bash
+#下一行的t会发生错误
+t
+
+chmod +x test.sh
+//其中err.log若不存在则创建
+./test.sh > err.log
+echo"
+======="
+./test.sh >> err.log 2>&1
+
+
+awk:
+cat file.txt
+aaa,1,bbb,2,ccc,3,ddd,4,eee
+cat file.txt |awk -F, '{print $1"," $3 }'
+aaa,bbb
+
+
+在testfile的第4行添加newLine
+sed:
+sed -e 4a\newLine testfile 
+
+
